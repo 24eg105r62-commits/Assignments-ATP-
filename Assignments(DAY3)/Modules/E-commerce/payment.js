@@ -12,16 +12,16 @@ function processPayment(paymentMethod, couponCode = null) {
       console.log(reduceStock(stock.id, stock.quantity));
     }
   }
+  let oredered = {
+    orderId: generateOrderId(),
+    items: trolley,
+    total: trolley_total,
+    paymentMethod: paymentMethod,
+    status1: "success",
+    message: "completeed shopping",
+  };
   console.log(clearCart());
-  return;
-  {
-    orderId: generateOrderId();
-    items: [...trolley];
-    total: trolley_total;
-    paymentMethod: paymentMethod;
-    status1: "success/failed";
-    message: "completeed shopping";
-  }
+  return oredered;
 }
 
 function validatePaymentMethod(method) {
@@ -33,5 +33,6 @@ function validatePaymentMethod(method) {
 function generateOrderId() {
   return "ORD" + Date.now();
 }
+console.log(processPayment("card", "FLAT500"));
 
 export { processPayment, validatePaymentMethod, generateOrderId };

@@ -11,13 +11,28 @@ const coupons = {
 };
 function validateCoupon(couponCode, getCartTotal, cartItems) {
   let total = getCartTotal();
-  let item = cartItems;
-  for (let cou in coupons) {
-    if (couponCode === cou && total >= coupons[cou].minAmount) {
-      return { valid: true, message: "coupon is applicable" };
+
+  let coupon = coupons[couponCode];
+
+  if (!coupon) {
+    return false;
+  }
+
+  if (total < coupon.minAmount) {
+    return false;
+  }
+  if (coupon.category === "electronics") {
+    let hasElectronics = cartItems.some(
+      (item) => item.category === "electronics",
+    );
+
+    if (!hasElectronics) {
+      return;
+      false;
     }
   }
-  return false;
+
+  return true;
 }
 function calculateDiscount(couponCode, getCartTotal) {
   let total = getCartTotal();
@@ -36,4 +51,4 @@ function applyDiscount(getCartTotal, couponCode, cartItems) {
   }
   console.log(amount);
 }
-applyDiscount(getCartTotal, "FLAT500", cartItems);
+export { validateCoupon, calculateDiscount, applyDiscount };

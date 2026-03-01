@@ -1,0 +1,8 @@
+1. Generate package.json file(which contains complete information of the application )
+2. Create HTTP Server
+   -Install express module.
+   > npm install module.
+   > -import express module in server.js
+   > import exp from 'express'
+>POST and PUT request should send data through the api as body of the request object
+>GET and DELETE request does not contain body only header,so that these two requests can send data through end-point

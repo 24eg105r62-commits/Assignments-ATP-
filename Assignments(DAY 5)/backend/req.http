@@ -1,0 +1,59 @@
+GET http://localhost:9999/users
+
+###
+GET http://localhost:9999/users/1
+###
+
+
+GET http://localhost:9999/users/12
+###
+
+
+POST http://localhost:9999/users
+Content-Type: application/json
+
+{
+    "id":1,
+    "name":"nithish",
+    "age":18
+}
+###
+PUT http://localhost:9999/users
+Content-Type: application/json
+
+{
+    "id":1,
+    "name":"sagar",
+    "age":20
+}
+###
+DELETE http://localhost:9999/users/1
+
+###
+GET http://localhost:9999/products
+
+###
+GET http://localhost:9999/products/apple
+###
+
+POST http://localhost:9999/products
+Content-Type: application/json
+
+{
+    "id":1,
+    "name":"nithish",
+    "brand":"samsung",
+    "price":100
+}
+###
+PUT http://localhost:9999/products
+Content-Type: application/json
+
+{
+    "id":1,
+    "name":"sagar",
+    "brand":"samsung",
+    "price":1000
+}
+###
+DELETE http://localhost:9999/products/1
