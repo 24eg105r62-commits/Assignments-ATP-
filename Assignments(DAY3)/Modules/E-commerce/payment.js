@@ -8,7 +8,7 @@ function processPayment(paymentMethod, couponCode = null) {
   let trolley_total = getCartTotal(); // 2. Apply discount if coupon provided
   if (validatePaymentMethod(paymentMethod)) {
     console.log("Payment Processing");
-    for (let stock in trolley) {
+    for (let stock of trolley) {
       console.log(reduceStock(stock.id, stock.quantity));
     }
   }

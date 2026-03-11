@@ -60,13 +60,13 @@ function checkStock(productId, quantity) {
   }
 }
 function reduceStock(productId, quantity) {
-  products.map((product) => {
+  for (let product of products) {
     if (product.id === productId) {
-      product.stock = product.stock - quantity;
+      product.stock -= quantity;
       return "reduced";
     }
-    return "failed to reduce Quantity";
-  });
+  }
+  return "failed to reduce quantity";
 }
 export {
   products,
