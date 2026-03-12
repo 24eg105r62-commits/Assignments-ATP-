@@ -1,0 +1,25 @@
+POST http://localhost:4001/product-api/product
+Content-Type: application/json
+
+{
+    "productId":201,
+    "productName":"laptop",
+    "price":20000,
+    "brand":"lenovo"
+}
+###
+GET  http://localhost:4001/product-api/product
+###
+GET  http://localhost:4001/product-api/product/69b2cd132d547995d03228d5
+###
+PUT   http://localhost:4001/product-api/product/201
+Content-Type: application/json
+
+{
+    "productId":201,
+    "productName":"washing machine",
+    "price":20001,
+    "brand":"FIB"
+}
+###
+DELETE  http://localhost:4001/product-api/product/69b2cd132d547995d03228d5
