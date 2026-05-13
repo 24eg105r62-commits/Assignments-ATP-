@@ -1,9 +1,36 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router";
 
 function Home() {
+  const [articles, setArticles] = useState([]);
+
+  useEffect(() => {
+    const fetchArticles = async () => {
+      try {
+        const response = await fetch("http://localhost:3000/articles");
+        const data = await response.json();
+        setArticles(data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchArticles();
+  }, []);
+
   return (
-    <div>Home</div>
-  )
+    <div>
+      <h1>Latest Articles</h1>
+      <div>
+        {articles.map((article) => (
+          <div key={article.id}>
+            <h2>{article.title}</h2>
+            <p>{article.summary}</p>
+            <Link to={`/article/${article.id}`}>Read More</Link>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
 
-export default Home
+export default Home;
