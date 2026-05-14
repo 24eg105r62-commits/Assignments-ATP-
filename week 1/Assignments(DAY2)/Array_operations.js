@@ -1,4 +1,4 @@
-const employees = [
+const employees = [ // Employee data
   {
     eno: 101,
     name: "Ravi",
@@ -26,11 +26,11 @@ const employees = [
   },
 ];
 
-//1. Insert new Emp at 2nd position
+// Inserts employee
 employees.splice(1, 0, { eno: 106, name: "Nithish", marks: [80, 85, 90] });
 console.log(employees);
 
-//2. Remove an emp with name "Kiran"
+// Removes employee
 let count = 0;
 for (let key of employees) {
   if (key.name === "Kiran") {
@@ -41,7 +41,7 @@ for (let key of employees) {
 employees.splice(count, 1);
 console.log(employees);
 
-//3.Change the last mark 95 to 75 of emp  "Sneha"
+// Updates marks
 for (let key of employees) {
   if (key.name == "Sneha") {
     for (let i = 0; i < key.marks.length; i++) {
