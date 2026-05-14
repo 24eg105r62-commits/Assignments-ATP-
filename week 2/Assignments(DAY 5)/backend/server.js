@@ -1,4 +1,4 @@
-//Create HTTP Server
+// User & Product APIs
 import exp from "express";
 const app = exp();
 //use body parser midldeware

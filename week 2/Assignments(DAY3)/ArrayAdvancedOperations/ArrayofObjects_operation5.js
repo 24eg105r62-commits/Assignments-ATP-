@@ -1,3 +1,4 @@
+// Transaction history
 const transactions = [
   { id: 1, type: "credit", amount: 5000 },
   { id: 2, type: "debit", amount: 2000 },

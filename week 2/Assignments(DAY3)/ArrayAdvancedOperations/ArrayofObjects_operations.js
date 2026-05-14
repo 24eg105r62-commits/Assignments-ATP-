@@ -1,4 +1,4 @@
-//Test Data :
+// Shopping cart
 const cart = [
   { id: 101, name: "Laptop", price: 60000, quantity: 1, inStock: true },
   { id: 102, name: "Mouse", price: 800, quantity: 2, inStock: true },

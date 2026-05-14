@@ -1,4 +1,4 @@
-//Test data:
+// Temperature analysis
 const temperatures = [32, 35, 28, 40, 38, 30, 42];
 
 //Tasks:

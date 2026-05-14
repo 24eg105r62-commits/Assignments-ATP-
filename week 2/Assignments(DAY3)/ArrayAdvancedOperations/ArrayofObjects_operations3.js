@@ -1,3 +1,4 @@
+// Employee management
 const employees = [
   { id: 201, name: "Amit", salary: 45000, department: "IT" },
   { id: 202, name: "Neha", salary: 60000, department: "HR" },

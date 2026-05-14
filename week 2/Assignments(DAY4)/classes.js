@@ -1,3 +1,4 @@
+// Book class
 class Book {
   title;
   author;

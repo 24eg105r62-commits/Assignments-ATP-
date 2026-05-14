@@ -1,3 +1,4 @@
+// Deep copy
 const order = {
   orderId: "ORD1001",
   customer: {
@@ -10,9 +11,9 @@ const order = {
   items: [{ product: "Laptop", price: 70000 }],
 };
 
+// structuredClone usage
 let order1 = structuredClone(order);
 order1.customer.address.city = "chennai";
 order1.items[0].price = 10000;
 console.log(order);
 console.log(order1);
-//
