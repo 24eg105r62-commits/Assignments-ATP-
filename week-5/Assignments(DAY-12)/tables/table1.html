@@ -1,9 +1,16 @@
+<!-- 
+    Purpose: Displays academic grades for multiple subjects using a table with row spans.
+    Logic Flow:
+    - Header defines subjects and names of people.
+    - Each subject (Biology, Chemistry, Physics) spans two rows to separate 'Practical' and 'Theory' marks.
+    - Uses 'rowspan' to group the subject name across the marks categories.
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Grades Table</title>
     <link rel="stylesheet" href="table1.css">
 </head>
 <body>
@@ -16,6 +23,7 @@
             </tr>
         </thead>
         <tbody>
+            <!-- Biology Section -->
             <tr>
                 <td rowspan="2">Biology</td>
                 <td>Practical</td>
@@ -23,34 +31,35 @@
                 <td>A</td>
             </tr>
             <tr>
-                 <td>theory</td>
+                <td>theory</td>
                 <td>A+</td>
                 <td>A</td>
             </tr>
+            <!-- Chemistry Section -->
             <tr>
-            <td rowspan="2">Chemistry</td>
-             <td>Practical</td>
+                <td rowspan="2">Chemistry</td>
+                <td>Practical</td>
                 <td>B</td>
                 <td>C</td>
-              </tr>
-              <tr>
+            </tr>
+            <tr>
                 <td>Theory</td>
                 <td>A</td>
                 <td>C+</td>
-              </tr>
-               <tr>
-            <td rowspan="2">Physics</td>
-             <td>Practical</td>
+            </tr>
+            <!-- Physics Section -->
+            <tr>
+                <td rowspan="2">Physics</td>
+                <td>Practical</td>
                 <td>A</td>
                 <td>A</td>
-              </tr>
-              <tr>
+            </tr>
+            <tr>
                 <td>Theory</td>
                 <td>A-</td>
                 <td>A-</td>
-              </tr>
-            </tbody>
+            </tr>
+        </tbody>
     </table>
-    
 </body>
 </html>

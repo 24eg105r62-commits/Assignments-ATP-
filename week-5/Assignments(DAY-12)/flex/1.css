@@ -1,21 +1,30 @@
-nav{
+/* 
+    Purpose: Styles for the flexbox layout demonstration.
+    Key Rules:
+    - nav: Flex container for the navigation items with 'space-around' justification.
+    - div: The main content container using flexbox with a background image and gap between items.
+    - section: Card-like styling for each article section with shadows and padding.
+    - img: Circular styling for article thumbnails.
+*/
+nav {
     display: flex;
     justify-content: space-around;
     background-color: bisque;
     padding: 0 400px;
 }
-div{
+
+div {
     display: flex;
     padding-top: 100px;
     gap: 30px;
     justify-content: space-around;
-   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGkwAgpT3nXfLgNkq_p7KLoo4DvKUJAjgeYS8p8c-RoLMM533VNMRNZEx2ejVgFmwrs6zt98AiTIBeuikUHNqzFYYVUqr834n5i1I4ujgmRUbHOqpdaU3XEf3jZXZ9u7LSkGQ&s=10&ec=121584914);
-   background-repeat: no-repeat;
-   background-size: cover;
-    padding-bottom: 200px;;
-    
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGkwAgpT3nXfLgNkq_p7KLoo4DvKUJAjgeYS8p8c-RoLMM533VNMRNZEx2ejVgFmwrs6zt98AiTIBeuikUHNqzFYYVUqr834n5i1I4ujgmRUbHOqzFYYVUqr834n5i1I4ujgmRUbHOqpdaU3XEf3jZXZ9u7LSkGQ&s=10&ec=121584914);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 200px;
 }
-section{
+
+section {
     text-align: center;
     box-shadow: 0px 0px 20px;
     width: 300px;
@@ -23,15 +32,18 @@ section{
     padding: 30px;
     background-color: white;
 }
-img{
+
+img {
     width: auto;
     height: auto;
     border-radius: 50%;
     padding-bottom: 5px;
 }
-h2{
+
+h2 {
     border: 2px solid red;
     width: 80px;
     margin: auto;
-   border-radius: 20px;
-   background-color: rgb(71, 179, 163)}
+    border-radius: 20px;
+    background-color: rgb(71, 179, 163);
+}

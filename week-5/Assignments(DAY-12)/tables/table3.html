@@ -1,66 +1,74 @@
+<!-- 
+    Purpose: Displays a user list in a styled table with profile pictures.
+    Logic Flow:
+    - Defines a table with a main header and subheaders.
+    - Each row in the body represents a user with an image, name, email, phone, and comments.
+    - Uses classes 'greycolor' and 'lightcolor' for zebra-striping or alternating row colors.
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Users Table</title>
     <link rel="stylesheet" href="table3.css">
 </head>
 <body>
     <table>
         <thead>
+            <!-- Main Title Row -->
             <tr class="mainheading">
                 <th colspan="5">USERS</th>
             </tr>
-       
-        <tr class="Subheading">
-            <th>Picture</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Comments</th>
-        </tr>
-         </thead>
+            <!-- Subheading Row -->
+            <tr class="Subheading">
+                <th>Picture</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Comments</th>
+            </tr>
+        </thead>
         <tbody>
+            <!-- User Entry 1 -->
             <tr class="greycolor">
-                <td><img src="https://img.freepik.com/free-photo/lifestyle-beauty-fashion-people-emotions-concept-young-asian-female-office-manager-ceo-with-pleased-expression-standing-white-background-smiling-with-arms-crossed-chest_1258-59329.jpg?semt=ais_hybrid&w=740&q=80" alt="not Availaible" ></td>
+                <td><img src="https://img.freepik.com/free-photo/lifestyle-beauty-fashion-people-emotions-concept-young-asian-female-office-manager-ceo-with-pleased-expression-standing-white-background-smiling-with-arms-crossed-chest_1258-59329.jpg?semt=ais_hybrid&w=740&q=80" alt="not Available"></td>
                 <td>John Doe</td>
                 <td>John.Doe@foo.com</td>
                 <td>+91 345729019</td>
                 <td>Lorem ipsum dolor sit.</td>
             </tr>
-               <tr class="lightcolor">
-                <td><img src="https://img.freepik.com/free-photo/lifestyle-beauty-fashion-people-emotions-concept-young-asian-female-office-manager-ceo-with-pleased-expression-standing-white-background-smiling-with-arms-crossed-chest_1258-59329.jpg?semt=ais_hybrid&w=740&q=80" alt="not Availaible" ></td>
+            <!-- User Entry 2 -->
+            <tr class="lightcolor">
+                <td><img src="https://img.freepik.com/free-photo/lifestyle-beauty-fashion-people-emotions-concept-young-asian-female-office-manager-ceo-with-pleased-expression-standing-white-background-smiling-with-arms-crossed-chest_1258-59329.jpg?semt=ais_hybrid&w=740&q=80" alt="not Available"></td>
                 <td>John Doe</td>
                 <td>John.Doe@foo.com</td>
                 <td>+91 345729019</td>
                 <td>Lorem ipsum dolor sit.</td>
             </tr>
-               <tr class="greycolor">
-                <td><img src="https://img.freepik.com/free-photo/lifestyle-beauty-fashion-people-emotions-concept-young-asian-female-office-manager-ceo-with-pleased-expression-standing-white-background-smiling-with-arms-crossed-chest_1258-59329.jpg?semt=ais_hybrid&w=740&q=80" alt="not Availaible" ></td>
+            <!-- Repeat entries as needed... -->
+            <tr class="greycolor">
+                <td><img src="https://img.freepik.com/free-photo/lifestyle-beauty-fashion-people-emotions-concept-young-asian-female-office-manager-ceo-with-pleased-expression-standing-white-background-smiling-with-arms-crossed-chest_1258-59329.jpg?semt=ais_hybrid&w=740&q=80" alt="not Available"></td>
                 <td>John Doe</td>
                 <td>John.Doe@foo.com</td>
                 <td>+91 345729019</td>
                 <td>Lorem ipsum dolor sit.</td>
             </tr>
-               <tr class="lightcolor">
-                <td><img src="https://img.freepik.com/free-photo/lifestyle-beauty-fashion-people-emotions-concept-young-asian-female-office-manager-ceo-with-pleased-expression-standing-white-background-smiling-with-arms-crossed-chest_1258-59329.jpg?semt=ais_hybrid&w=740&q=80" alt="not Availaible" ></td>
+            <tr class="lightcolor">
+                <td><img src="https://img.freepik.com/free-photo/lifestyle-beauty-fashion-people-emotions-concept-young-asian-female-office-manager-ceo-with-pleased-expression-standing-white-background-smiling-with-arms-crossed-chest_1258-59329.jpg?semt=ais_hybrid&w=740&q=80" alt="not Available"></td>
                 <td>John Doe</td>
                 <td>John.Doe@foo.com</td>
                 <td>+91 345729019</td>
                 <td>Lorem ipsum dolor sit.</td>
             </tr>
-               <tr class="greycolor">
-                <td><img src="https://img.freepik.com/free-photo/lifestyle-beauty-fashion-people-emotions-concept-young-asian-female-office-manager-ceo-with-pleased-expression-standing-white-background-smiling-with-arms-crossed-chest_1258-59329.jpg?semt=ais_hybrid&w=740&q=80" alt="not Availaible" ></td>
+            <tr class="greycolor">
+                <td><img src="https://img.freepik.com/free-photo/lifestyle-beauty-fashion-people-emotions-concept-young-asian-female-office-manager-ceo-with-pleased-expression-standing-white-background-smiling-with-arms-crossed-chest_1258-59329.jpg?semt=ais_hybrid&w=740&q=80" alt="not Available"></td>
                 <td>John Doe</td>
                 <td>John.Doe@foo.com</td>
                 <td>+91 345729019</td>
                 <td>Lorem ipsum dolor sit.</td>
             </tr>
-
         </tbody>
-
     </table>
-    
 </body>
 </html>
