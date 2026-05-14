@@ -1,66 +1,53 @@
-/**
- * Purpose: A RESTful API server using Express to manage users and products.
- * Key Variables:
- * - app: Express application instance.
- * - users, products: In-memory arrays acting as data stores.
- * Logic Flow:
- * - Initializes Express and JSON middleware.
- * - Defines CRUD (Create, Read, Update, Delete) routes for '/users' and '/products'.
- * - Uses route parameters (:id, :brand) for fetching/deleting specific items.
- * - Listens on port 9999.
- */
+//Create HTTP Server
 import exp from "express";
 const app = exp();
-
-// Middleware to parse JSON request bodies
+//use body parser midldeware
 app.use(exp.json());
 
+//set port no
 const port = 9999;
-app.listen(port, () => console.log("Server running on port " + port));
+//assign port no to HTTP Server
+app.listen(port, () => console.log("server running"));
 
-// In-memory data storage
+//test data
 let users = [];
-let products = [];
 
-// --- User Routes ---
-
-// Get all users
+//Create API(REST API-representational state transfer)
+//route to handle get request of client
 app.get("/users", (req, res) => {
-  res.json({ message: "These are users data", payload: users });
+  //read
+  res.json({ message: "these are users data", payload: users });
 });
+//get route by id
 
-// Get user by ID
 app.get("/users/:id", (req, res) => {
-  let userId = Number(req.params.id);
-  let user = users.find((u) => u.id === userId);
-  if (!user) {
-    return res.json({ message: "User not found" });
+  let getuser = Number(req.params.id);
+  let index = users.findIndex((user) => user.id === getuser);
+  if (index === -1) {
+    return res.json({ message: "not found" });
   }
-  return res.json({ message: "User found", payload: user });
+  return res.json({ message: "found", payload: users[index] });
 });
-
-// Update user
+//route to handle put request of client
 app.put("/users", (req, res) => {
-  let modifiedUser = req.body;
-  let index = users.findIndex((u) => u.id === modifiedUser.id);
+  let modified = req.body;
+  let index = users.findIndex((user) => user.id === modified.id);
   if (index === -1) {
     return res.json({ message: "User not found" });
   }
-  users.splice(index, 1, modifiedUser);
-  return res.json({ message: "User updated" });
+  users.splice(index, 1, modified);
+  return res.json({ message: "user updated" });
 });
-
-// Create user
+//route to handle post request of client
 app.post("/users", (req, res) => {
-  let newUser = req.body;
-  users.push(newUser);
-  res.json({ message: "User created" });
+  let usersnew = req.body;
+  users.push(usersnew);
+  res.json({ message: "user created" });
 });
-
-// Delete user by ID
+//route to handle delete request of client
 app.delete("/users/:id", (req, res) => {
-  let userId = Number(req.params.id);
-  let index = users.findIndex((u) => u.id === userId);
+  let urluser = Number(req.params.id);
+  let index = users.findIndex((user) => user.id === urluser);
   if (index === -1) {
     return res.json({ message: "User not found" });
   }
@@ -68,48 +55,39 @@ app.delete("/users/:id", (req, res) => {
   return res.json({ message: "User deleted" });
 });
 
-// --- Product Routes ---
-
-// Get all products
+let products = [];
 app.get("/products", (req, res) => {
-  res.json({ message: "These are products data", payload: products });
+  //read
+  res.json({ message: "these are users data", payload: products });
 });
-
-// Get product by brand
 app.get("/products/:brand", (req, res) => {
-  let brand = req.params.brand;
-  let product = products.find((p) => p.brand === brand);
-  if (!product) {
-    return res.json({ message: "Product not found" });
+  let getuser = req.params.brand;
+  let index = products.find((product) => product.brand === getuser);
+  if (index === undefined) {
+    return res.json({ message: "not found" });
   }
-  return res.json({ message: "Product found", payload: product });
+  return res.json({ message: "found", payload: index });
 });
-
-// Create product
 app.post("/products", (req, res) => {
-  let newProduct = req.body;
-  products.push(newProduct);
-  res.json({ message: "Product created" });
+  let productnew = req.body;
+  products.push(productnew);
+  res.json({ message: "user created" });
 });
-
-// Update product
 app.put("/products", (req, res) => {
-  let modifiedProduct = req.body;
-  let index = products.findIndex((p) => p.id === modifiedProduct.id);
+  let modified = req.body;
+  let index = products.findIndex((product) => product.id === modified.id);
   if (index === -1) {
-    return res.json({ message: "Product not found" });
+    return res.json({ message: "User not found" });
   }
-  products.splice(index, 1, modifiedProduct);
-  return res.json({ message: "Product updated" });
+  products.splice(index, 1, modified);
+  return res.json({ message: "user updated" });
 });
-
-// Delete product by ID
 app.delete("/products/:id", (req, res) => {
-  let productId = Number(req.params.id);
-  let index = products.findIndex((p) => p.id === productId);
+  let urluser = Number(req.params.id);
+  let index = products.findIndex((product) => product.id === urluser);
   if (index === -1) {
-    return res.json({ message: "Product not found" });
+    return res.json({ message: "User not found" });
   }
   products.splice(index, 1);
-  return res.json({ message: "Product deleted" });
+  return res.json({ message: "User deleted" });
 });

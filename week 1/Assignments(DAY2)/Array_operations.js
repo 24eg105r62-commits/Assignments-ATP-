@@ -1,12 +1,3 @@
-/**
- * Purpose: Demonstrates various array operations on a collection of employee objects.
- * Key Variables:
- * - employees: Array of objects, each representing an employee with 'eno', 'name', and 'marks'.
- * Logic Flow:
- * 1. Insertion: Adds a new employee at the second position using splice.
- * 2. Deletion: Finds the index of an employee named "Kiran" and removes them using splice.
- * 3. Update: Iterates through the employees to find "Sneha" and updates a specific mark.
- */
 const employees = [
   {
     eno: 101,
@@ -35,11 +26,11 @@ const employees = [
   },
 ];
 
-// 1. Insert new Emp at 2nd position (index 1)
+//1. Insert new Emp at 2nd position
 employees.splice(1, 0, { eno: 106, name: "Nithish", marks: [80, 85, 90] });
-console.log("After Insertion:", employees);
+console.log(employees);
 
-// 2. Remove an emp with name "Kiran"
+//2. Remove an emp with name "Kiran"
 let count = 0;
 for (let key of employees) {
   if (key.name === "Kiran") {
@@ -47,13 +38,10 @@ for (let key of employees) {
   }
   count++;
 }
-// If count is less than length, it means "Kiran" was found
-if (count < employees.length) {
-  employees.splice(count, 1);
-}
-console.log("After Deleting Kiran:", employees);
+employees.splice(count, 1);
+console.log(employees);
 
-// 3. Change the last mark 95 to 75 of emp "Sneha"
+//3.Change the last mark 95 to 75 of emp  "Sneha"
 for (let key of employees) {
   if (key.name == "Sneha") {
     for (let i = 0; i < key.marks.length; i++) {
@@ -63,4 +51,4 @@ for (let key of employees) {
     }
   }
 }
-console.log("After Updating Sneha's marks:", employees);
+console.log(employees);

@@ -1,53 +1,47 @@
-/* 
-    Purpose: Advanced styling for the Users Table (table3.html).
-    Key Rules:
-    - table: Full width with rounded corners and shadow.
-    - img: Circular profile picture styling with borders.
-    - Color Classes: Specific background colors for headers and alternating rows (mainheading, lightcolor, Subheading, greycolor).
-*/
-table {
+table{
     margin-top: 60px;
     width: 100%;
     height: fit-content;
-    border-radius: 20px;
-    border-collapse: collapse;
-    box-shadow: 0px 0px 20px;
+       border-radius: 20px;
+   border-collapse: collapse;
+   box-shadow: 0px 0px 20px;
+   
 }
-
-img {
+img{
     width: 60px;
     height: 60px;
     border-radius: 50%;
     border: solid black;
-}
 
-thead, tbody {
+    
+}
+thead,tbody{
     text-align: center;
     padding: 20px;
-}
 
-th {
+    
+}
+th{
     padding: 30px;
+    
 }
-
-.mainheading {
+.mainheading{
     border-radius: 20px;  
     background-color: rgb(66, 146, 119);
+    box-shadow: inset;
 }
 
-.lightcolor {
+.lightcolor{
+    background-color:rgb(153, 225, 208);
+    padding:40px;
+}
+.Subheading{
     background-color: rgb(153, 225, 208);
-    padding: 40px;
+    
 }
-
-.Subheading {
-    background-color: rgb(153, 225, 208);
-}
-
-.greycolor {
+.greycolor{
     background-color: rgb(178, 253, 227);
 }
-
-body {
+body{
     background-color: rgb(58, 130, 126);
 }

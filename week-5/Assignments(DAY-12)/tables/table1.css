@@ -1,21 +1,14 @@
-/* 
-    Purpose: General styling for tables to ensure consistency across various table assignments.
-    Key Rules:
-    - table: Centered layout with margin, border, and a shadow for depth.
-    - thead, tbody, td, th: Standardized text alignment and dotted borders for visibility.
-*/
-table {
+table{
     margin: auto;
     margin-top: 120px;
     border: 3px solid black;
-    padding: 10px;
+    padding:10px;
     width: 400px;
     box-shadow: 0px 0px 20px;
     border-collapse: collapse;
 }
-
-thead, tbody, td, th {
-    text-align: center;
-    border: 1px dotted black;
-    border-collapse: collapse;
-}
+thead,tbody,td,th{
+        text-align: center;
+        border: 1px dotted black;
+        border-collapse: collapse;
+    }
