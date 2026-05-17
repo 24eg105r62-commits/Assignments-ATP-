@@ -4,17 +4,16 @@ import { useState, createContext } from "react";
 export const counterContextObj = createContext();
 
 function ContextProvider({ children }) {
-  //state
-  const [counter, setCounter] = useState(0);
-  //functions to change state
-  const increment = () => {
-    setCounter(counter + 1);
+  const [counters, setCounters] = useState([0, 0, 0, 0]);
+
+  const increment = (id) => {
+    setCounters((prev) => prev.map((val, i) => (i === id ? val + 1 : val)));
   };
-  const decrement = () => {
-    setCounter(counter - 1);
+  const decrement = (id) => {
+    setCounters((prev) => prev.map((val, i) => (i === id ? val - 1 : val)));
   };
   return (
-    <counterContextObj.Provider value={{ counter, increment, decrement }}>
+    <counterContextObj.Provider value={{ counters, increment, decrement }}>
       {children}
     </counterContextObj.Provider>
   );
