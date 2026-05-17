@@ -28,7 +28,7 @@ function EditEmployee() {
   const saveModifiedEmp = async (modifiedEmp) => {
     try {
       const res = await axios.put(
-        `http://localhost:3000/employee-api/employee/${state._id}`,
+        `https://employee-management-ksxo.onrender.com/employee-api/employee/${state._id}`,
         modifiedEmp
       );
 
