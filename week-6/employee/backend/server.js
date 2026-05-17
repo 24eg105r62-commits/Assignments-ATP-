@@ -8,9 +8,7 @@ config();//process .env.PORT,process.env.DB_URL
 
 const app = exp()
 //add cors middleware
-app.use(cors({
-  origin:['http://localhost:5173']
-}))
+app.use(cors())
 app.use(exp.json());
 //forward req to empApp if path starts with /employee-api
 app.use('/employee-api',empApp);
