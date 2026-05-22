@@ -39,22 +39,23 @@ function ListOfEmps() {
 
   return (
     <div>
-      <h1 className="text-4xl text-center mb-4">List of Employees</h1>
-      <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+      <h1 className="text-3xl font-bold text-indigo-700 text-center mb-8">Employees</h1>
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {emps?.map((empObj) => (
-          <div key={empObj._id} className=" bg-white p-5">
-            <p>{empObj.email}</p>
-            <p className="mb-3">{empObj.name}</p>
-            <div className="flex justify-around gap-2">
-        <button onClick={()=>gotoEmployee(empObj)} className="bg-green-400 p-2 rounded-2xl text-white">view</button>
-        <button onClick={()=>gotoEditEmployee(empObj)} className="bg-orange-400 p-2 rounded-2xl text-white">Edit</button>
-        <button onClick={()=>deleteEmpByID(empObj._id)} className="bg-red-400 p-2 rounded-2xl text-white">Delete</button>
-      </div>
+          <div key={empObj._id} className="bg-white border border-indigo-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition">
+            <div className="w-10 h-10 bg-linear-to-br from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mb-3">
+              <span className="text-white font-bold text-sm">{empObj.name?.[0]?.toUpperCase()}</span>
+            </div>
+            <p className="font-semibold text-indigo-800 truncate">{empObj.name}</p>
+            <p className="text-sm text-indigo-400 truncate mb-4">{empObj.email}</p>
+            <div className="flex gap-2">
+              <button onClick={() => gotoEmployee(empObj)} className="flex-1 bg-indigo-100 text-indigo-700 text-sm py-1.5 rounded-lg hover:bg-indigo-200 transition">View</button>
+              <button onClick={() => gotoEditEmployee(empObj)} className="flex-1 bg-purple-100 text-purple-700 text-sm py-1.5 rounded-lg hover:bg-purple-200 transition">Edit</button>
+              <button onClick={() => deleteEmpByID(empObj._id)} className="flex-1 bg-red-100 text-red-600 text-sm py-1.5 rounded-lg hover:bg-red-200 transition">Delete</button>
+            </div>
           </div>
         ))}
-    
-      
-    </div>
+      </div>
     </div>
   );
 }
